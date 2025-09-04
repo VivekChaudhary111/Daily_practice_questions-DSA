@@ -1,14 +1,14 @@
-// Last updated: 9/4/2025, 11:18:15 AM
+// Last updated: 9/4/2025, 11:26:17 AM
 class Solution {
-    public int maxUncrossedLines(int[] nums1, int[] nums2) {
-        return LCS_BU(nums1, nums2);
+    public int longestCommonSubsequence(String text1, String text2) {
+		return LCS_BU(text1, text2);
     }
-    public static int LCS_BU(int[] s1, int[] s2) {
-		int[][] dp = new int[s1.length +1][s2.length+1];
+    public static int LCS_BU(String s1, String s2) {
+		int[][] dp = new int[s1.length() +1][s2.length()+1];
 		for(int i = 1; i< dp.length; i++) {
 			for(int j = 1; j < dp[0].length; j++) {
 				int ans = 0;
-				if(s1[i-1] == s2[j-1]) {
+				if(s1.charAt(i-1) == s2.charAt(j-1)) {
 					ans =  1 + dp[i-1][j-1];
 				}else {
 					int f = dp[i-1][j];
