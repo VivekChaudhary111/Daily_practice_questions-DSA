@@ -1,17 +1,14 @@
-// Last updated: 9/8/2025, 1:49:50 AM
+// Last updated: 9/8/2025, 1:51:25 AM
 class Solution {
     public int[] sumZero(int n) {
-        int[] arr = new int[n];
-        if(n%2 != 0){
-            arr[0] = 0;
-            if(n == 1) return arr;
-            n--;
+        int[] arr=new int[n];
+        int sum=0;
+        for(int i=0;i<n-1;i++)
+        {
+            arr[i]=i+1;
+            sum+=arr[i];
         }
-        int multiplicant = 1;
-        for(int i = 0; i < n; i++){
-            arr[i] = ((i+2)/2)*multiplicant;
-            multiplicant *= -1;
-        }
+        arr[n-1]=0-sum;
         return arr;
     }
 }
