@@ -1,4 +1,4 @@
-// Last updated: 9/19/2025, 3:26:56 PM
+// Last updated: 9/19/2025, 3:28:15 PM
 class Spreadsheet {
     private int[][] spreadsheet;
 
@@ -21,10 +21,7 @@ class Spreadsheet {
     }
 
     public int getValue(String formula) {
-        if (formula.startsWith("=")) {
-            formula = formula.substring(1);
-        }
-
+        formula = formula.substring(1);
         int idx = -1;
         for (int i = 0; i < formula.length(); i++) {
             if (formula.charAt(i) == '+') {
