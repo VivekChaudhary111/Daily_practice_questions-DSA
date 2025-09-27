@@ -1,21 +1,14 @@
-// Last updated: 9/27/2025, 2:27:50 PM
+// Last updated: 9/27/2025, 11:51:38 PM
 class Solution {
-    public int findPeakElement(int[] nums) {
+    public int maximumProduct(int[] nums) {
         int n = nums.length;
-        if(n == 1){
-            return 0;
+        if(n == 3){
+            return nums[0]*nums[1]*nums[2];
         }
-        if(nums[0] > nums[1]){
-            return 0;
-        }
-        if(nums[n-1] > nums[n-2]){
-            return n-1;
-        }
-        for(int i = 1; i < n-1; i++){
-            if(nums[i] > nums[i-1] && nums[i] > nums[i+1]){
-                return i;
-            }
-        }
-        return -1;
+        Arrays.sort(nums);
+        int prod1 = nums[0]*nums[1]*nums[2];
+        int prod2 = nums[0]*nums[1]*nums[n-1];
+        int prod3 = nums[n-3]*nums[n-2]*nums[n-1];
+        return Math.max(prod1, Math.max(prod2, prod3));
     }
 }
