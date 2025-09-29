@@ -1,16 +1,17 @@
-// Last updated: 9/29/2025, 2:51:34 PM
+// Last updated: 9/29/2025, 3:33:14 PM
 class Solution {
-    public int[][] restoreMatrix(int[] rowSum, int[] colSum) {
-        int[][] ans = new int[rowSum.length][colSum.length];
-        for(int i = 0; i < rowSum.length; i++){
-            for(int j = 0; j < colSum.length; j++){
-                if(rowSum[i]>0 && colSum[j] > 0){
-                    ans[i][j] = Math.min(rowSum[i], colSum[j]);
-                    rowSum[i] -= ans[i][j];
-                    colSum[j] -= ans[i][j];
-                }
-            }
+    public int diagonalSum(int[][] mat) {
+        int n = mat.length;
+        int sum = 0;
+        for(int i = 0; i < n; i++){
+            sum += mat[i][i];
         }
-        return ans;
+        for(int j = n-1; j >=0; j--){
+            sum += mat[j][n-j-1];
+        }
+        if(n % 2 != 0){
+            sum -= mat[n/2][n/2];
+        }
+        return sum;
     }
 }
