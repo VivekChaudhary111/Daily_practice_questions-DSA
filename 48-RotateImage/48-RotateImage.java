@@ -1,11 +1,14 @@
-// Last updated: 9/29/2025, 2:42:42 PM
+// Last updated: 9/29/2025, 2:51:34 PM
 class Solution {
-    public int[][] transpose(int[][] matrix) {
-        int m = matrix.length, n = matrix[0].length;
-        int[][] ans = new int[n][m];
-        for(int i = 0; i < m; i++){
-            for(int j = 0; j < n; j++){
-                ans[j][i] =  matrix[i][j];
+    public int[][] restoreMatrix(int[] rowSum, int[] colSum) {
+        int[][] ans = new int[rowSum.length][colSum.length];
+        for(int i = 0; i < rowSum.length; i++){
+            for(int j = 0; j < colSum.length; j++){
+                if(rowSum[i]>0 && colSum[j] > 0){
+                    ans[i][j] = Math.min(rowSum[i], colSum[j]);
+                    rowSum[i] -= ans[i][j];
+                    colSum[j] -= ans[i][j];
+                }
             }
         }
         return ans;
