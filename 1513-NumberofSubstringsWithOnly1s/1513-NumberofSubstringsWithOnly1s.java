@@ -1,4 +1,4 @@
-// Last updated: 11/16/2025, 12:54:26 PM
+// Last updated: 11/16/2025, 12:55:12 PM
 class Solution {
     static int mod=(int)Math.pow(10,9)+7;
     public int numSub(String s) {
