@@ -1,4 +1,4 @@
-// Last updated: 12/3/2025, 12:53:11 AM
+// Last updated: 12/3/2025, 12:57:40 AM
 1class Solution {
 2    public int countTrapezoids(int[][] points) {
 3        HashMap<Integer, Integer> map = new HashMap<>();
