@@ -1,4 +1,4 @@
-// Last updated: 12/21/2025, 11:24:15 PM
+// Last updated: 12/21/2025, 11:25:17 PM
 1class Solution {
 2    public String longestNiceSubstring(String s) {
 3        if (s.length() < 2) return "";
