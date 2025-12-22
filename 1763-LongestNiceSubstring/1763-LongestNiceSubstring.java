@@ -1,10 +1,10 @@
-// Last updated: 12/21/2025, 11:25:17 PM
+// Last updated: 12/22/2025, 4:32:28 PM
 1class Solution {
 2    public String longestNiceSubstring(String s) {
 3        if (s.length() < 2) return "";
 4
 5        int mid = -1;
-6        Set<Character> set = new HashSet<Character>();
+6        Set<Character> set = new HashSet<>();
 7        for(int i=0; i<s.length(); i++){
 8            set.add(s.charAt(i));
 9        }
