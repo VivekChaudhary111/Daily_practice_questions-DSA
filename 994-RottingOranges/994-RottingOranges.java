@@ -1,4 +1,4 @@
-// Last updated: 1/3/2026, 1:38:56 AM
+// Last updated: 1/3/2026, 1:45:42 AM
 1class Solution {
 2    public int orangesRotting(int[][] grid) {
 3        Queue<int[]> q = new LinkedList();
@@ -13,16 +13,16 @@
 12                }
 13            }
 14        }
-15        boolean[][] vis = new boolean[grid.length][grid[0].length];
+15        
 16        int ans = 0;
 17        while(!q.isEmpty()){
 18            int[] a = q.poll();
 19            int row = a[0], col = a[1], minutes = a[2];
-20            if(vis[row][col]) continue;
-21            vis[row][col] = true;
-22
-23            // if(grid[row][col] != 1) continue;
-24            if(grid[row][col] == 1) cnt--;
+20
+21            if(grid[row][col] == 1) {
+22                grid[row][col] = 2;
+23                cnt--;
+24            }
 25            if(minutes > ans) ans=minutes;
 26            if(cnt == 0) break;
 27
@@ -30,7 +30,7 @@
 29            for(int[] d : dr){
 30                int nr = row + d[0], nc = col + d[1];
 31                if(nr >= 0 && nc >= 0 && nr < grid.length && nc < grid[0].length){
-32                    if(!vis[nr][nc] && grid[nr][nc] == 1){
+32                    if(grid[nr][nc] == 1){
 33                        q.add(new int[] {nr, nc, minutes+1});
 34                    }
 35                }
