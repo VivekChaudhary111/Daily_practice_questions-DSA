@@ -1,4 +1,4 @@
-// Last updated: 1/3/2026, 12:55:51 AM
+// Last updated: 1/3/2026, 12:55:58 AM
 1class Solution {
 2    public int secondMinimum(int n, int[][] edges, int time, int change) {
 3        List<List<Integer>> graph = new ArrayList<>();
