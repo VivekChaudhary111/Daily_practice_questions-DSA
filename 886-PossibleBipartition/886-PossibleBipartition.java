@@ -1,4 +1,4 @@
-// Last updated: 1/3/2026, 11:41:59 PM
+// Last updated: 1/3/2026, 11:42:15 PM
 1class Solution {
 2    public boolean possibleBipartition(int n, int[][] dislikes) {
 3        List<List<Integer>> graph = new ArrayList<>();
