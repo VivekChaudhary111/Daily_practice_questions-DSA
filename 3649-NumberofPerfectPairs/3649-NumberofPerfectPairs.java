@@ -1,4 +1,4 @@
-// Last updated: 1/14/2026, 11:57:14 PM
+// Last updated: 1/30/2026, 11:53:56 PM
 1class Solution {
 2    public long perfectPairs(int[] nums) {
 3        var sorted = new ArrayList<Integer>();
