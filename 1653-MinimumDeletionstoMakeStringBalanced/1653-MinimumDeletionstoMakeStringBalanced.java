@@ -1,4 +1,4 @@
-// Last updated: 2/7/2026, 8:23:49 PM
+// Last updated: 2/7/2026, 8:26:33 PM
 1class Solution {
 2    public int minimumDeletions(String s) {
 3        int[][] dp = new int[s.length() + 1][2];
@@ -31,11 +31,6 @@
 30                DelB = 1 + getMinOps(s, idx + 1, isB, dp);
 31            }
 32        }
-33        int[] arr = {notDelB, DelB, notDelA, DelA};
-34        int min = notDelB;
-35        for(int i = 1; i < 4; i++){
-36            min = Math.min(arr[i], min);
-37        }
-38        return dp[idx][isB] = min;
-39    }
-40}
+33        return dp[idx][isB] = Math.min(notDelA, Math.min(DelA, Math.min(notDelB, DelB)));
+34    }
+35}
