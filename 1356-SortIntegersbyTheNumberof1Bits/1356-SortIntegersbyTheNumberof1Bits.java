@@ -1,4 +1,4 @@
-// Last updated: 2/26/2026, 3:52:26 AM
+// Last updated: 2/26/2026, 3:52:40 AM
 1class Solution {
 2    public int[] sortByBits(int[] arr) {
 3        Arrays.sort(arr);
