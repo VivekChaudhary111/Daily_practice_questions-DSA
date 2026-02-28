@@ -1,4 +1,4 @@
-// Last updated: 3/1/2026, 1:29:48 AM
+// Last updated: 3/1/2026, 1:29:56 AM
 1class Solution {
 2    public int concatenatedBinary(int n) {
 3        long res = 0;
