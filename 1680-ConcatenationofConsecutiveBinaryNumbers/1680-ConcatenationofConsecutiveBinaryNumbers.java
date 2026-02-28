@@ -1,4 +1,4 @@
-// Last updated: 3/1/2026, 1:32:31 AM
+// Last updated: 3/1/2026, 1:32:36 AM
 1class Solution {
 2    public int concatenatedBinary(int n) {
 3        int mod = 1_000_000_007;
