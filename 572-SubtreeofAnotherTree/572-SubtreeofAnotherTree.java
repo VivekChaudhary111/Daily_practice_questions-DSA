@@ -1,4 +1,4 @@
-// Last updated: 3/16/2026, 3:10:52 PM
+// Last updated: 3/16/2026, 3:11:45 PM
 1/**
 2 * Definition for a binary tree node.
 3 * public class TreeNode {
@@ -21,7 +21,7 @@
 20        }
 21        boolean flag = false;
 22        if(root.val == subRoot.val){
-23            if(solve(root, subRoot)) flag = true;
+23            flag = solve(root, subRoot);
 24        }
 25        return flag || isSubtree(root.left, subRoot) || isSubtree(root.right, subRoot);
 26
