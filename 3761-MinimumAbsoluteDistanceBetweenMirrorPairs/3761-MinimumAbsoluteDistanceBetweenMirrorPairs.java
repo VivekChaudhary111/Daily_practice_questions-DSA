@@ -1,4 +1,4 @@
-// Last updated: 12/5/2025, 9:36:21 AM
+// Last updated: 4/17/2026, 11:33:42 AM
 1class Solution {
 2    public int minMirrorPairDistance(int[] nums) {
 3        HashMap<Integer, Integer> map = new HashMap<>();
