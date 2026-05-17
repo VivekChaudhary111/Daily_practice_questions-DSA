@@ -1,4 +1,4 @@
-// Last updated: 5/17/2026, 11:22:22 AM
+// Last updated: 5/17/2026, 11:22:31 AM
 1class Solution {
 2    public boolean canReach(int[] arr, int start) {
 3        Queue<Integer> q = new LinkedList<>();
