@@ -1,4 +1,4 @@
-// Last updated: 6/11/2026, 10:34:41 PM
+// Last updated: 6/11/2026, 10:34:54 PM
 1class Solution {
 2    public int assignEdgeWeights(int[][] edges) {
 3        ArrayList<ArrayList<Integer>> ll = new ArrayList<>();
