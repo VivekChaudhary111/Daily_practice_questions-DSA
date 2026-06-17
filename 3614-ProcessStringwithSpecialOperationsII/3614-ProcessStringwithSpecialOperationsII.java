@@ -1,4 +1,4 @@
-// Last updated: 6/17/2026, 11:59:52 PM
+// Last updated: 6/17/2026, 11:59:59 PM
 1class Solution {
 2    public char processStr(String s, long k) {
 3        long len = 0;
