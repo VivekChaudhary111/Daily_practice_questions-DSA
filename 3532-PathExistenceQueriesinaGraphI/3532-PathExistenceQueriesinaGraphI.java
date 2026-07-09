@@ -1,4 +1,4 @@
-// Last updated: 7/9/2026, 11:17:01 PM
+// Last updated: 7/9/2026, 11:17:16 PM
 1class Solution {
 2    public class Node{
 3        int val;
