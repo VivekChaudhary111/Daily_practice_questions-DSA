@@ -1,4 +1,4 @@
-// Last updated: 7/31/2026, 12:46:16 AM
+// Last updated: 7/31/2026, 12:46:29 AM
 1class Solution {
 2    public int minimumPushes(String word) {
 3        int[][] freq = new int[26][2];
