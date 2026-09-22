@@ -1,20 +1,19 @@
-// Last updated: 9/23/2026, 12:49:26 AM
+// Last updated: 9/23/2026, 12:53:59 AM
 1class Solution {
 2    public List<List<Integer>> combine(int n, int k) {
-3        List<Integer> ll = new ArrayList<>();
-4        List<List<Integer>> ans = new ArrayList<>();
-5        combinations(n, k, ll, ans, 1);
-6        return ans;
-7    }
-8    public static void combinations(int n, int k, List<Integer> ll, List<List<Integer>> ans, int idx){
-9        if(k == 0){
-10            ans.add(new ArrayList(ll));
-11            return;
-12        }
-13        for(int i = idx; i <= n; i++){
-14            ll.add(i);
-15            combinations(n, k - 1, ll, ans, i + 1);
-16            ll.remove(ll.size() - 1);
-17        }
-18    }
-19}
+3        List<List<Integer>> ans = new ArrayList<>();
+4        solve(n, k, 1, ans, new ArrayList<>());
+5        return ans;
+6    }
+7    public void solve(int n, int k, int st, List<List<Integer>> ans, List<Integer> subans){
+8        if(k == 0){
+9            ans.add(new ArrayList<>(subans));
+10            return;
+11        }
+12        for(int i = st; i <= n; i++){
+13            subans.add(i);
+14            solve(n, k - 1, i + 1, ans, subans);
+15            subans.remove(subans.size() -  1);
+16        }
+17    }
+18}
