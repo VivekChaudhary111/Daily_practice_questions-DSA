@@ -1,4 +1,4 @@
-// Last updated: 9/22/2026, 11:37:41 PM
+// Last updated: 9/24/2026, 9:22:14 PM
 1class Solution {
 2    public List<String> generateParenthesis(int n) {
 3		List<String> ll = new ArrayList<>();
@@ -8,14 +8,12 @@
 7	}
 8	public static void Parentheses(int n, int closed, int open, String ans, List<String> ll) {
 9		if(open == n && closed == n) {
-10//			System.out.println(ans);
-11			ll.add(ans);
-12			return;
-13		}
-14		if(open > n || closed > open) {
-15			return;
-16		}
-17		Parentheses(n, closed, open+1, ans+"(", ll);
-18		Parentheses(n, closed+1, open, ans+")", ll);
-19    }
-20}
+10			ll.add(ans);
+11			return;
+12		}
+13		if(open < n)
+14		    Parentheses(n, closed, open+1, ans+"(", ll);
+15        if(closed < open)
+16		    Parentheses(n, closed+1, open, ans+")", ll);
+17    }
+18}
