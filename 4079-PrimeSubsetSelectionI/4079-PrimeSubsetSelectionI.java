@@ -1,4 +1,4 @@
-// Last updated: 10/12/2026, 11:52:10 PM
+// Last updated: 10/13/2026, 12:06:51 AM
 1class Solution {
 2    public List<Integer> maxPrimes(int n, int s) {
 3        List<Integer> ans = new ArrayList<>();
@@ -11,8 +11,8 @@
 10                if(i + sum <= s) {
 11                    ans.add(i);
 12                    sum += i;
-13                    for(int j = 2; j*i <= n; j++){
-14                        notPrime[i*j] = true;
+13                    for(int j = i*i;j >=0 && j <= n; j += i){
+14                        notPrime[j] = true;
 15                    }
 16                }else{
 17                    break;
